@@ -26,7 +26,21 @@ object Main {
    * Exercise 2 Parentheses Balancing
    */
   def balance(chars: List[Char]): Boolean = {
-   
+      var cOpenParenth: Int = 0
+      var cCloseParenth: Int = 0
+      for (i <- 0 until chars.length) {
+         if (chars(i) == '(') { 
+           cOpenParenth += 1 
+         }
+         if (chars(i) == ')') { 
+           cCloseParenth += 1
+         }
+    }
+    if (cOpenParenth == cCloseParenth) { 
+      true 
+    } else { 
+      false
+    }
   }
 
   /**
